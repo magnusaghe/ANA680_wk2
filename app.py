@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 
 app = Flask(__name__)
-filename = 'file_breastcancer.pkl
+filename = 'file_breastcancer.pkl'
 model = pickle.load(open(filename, 'rb'))    # load the model
 @app.route('/')
 def index():
