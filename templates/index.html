@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breast Cancer Prediction</title>
+    </head>
+    <body>
+    	<h1 style="color:Pink;">Breast Cancer Prediction</h1>
+        <h3 style="color:Pink;">UCI Breast Cancer Wisconsin Dataset</h3>
+        <p>Entries for each feature in the dataset are integers, and range from minimum of 1 to maximum of 10.</p><br />
+        <form action="{{ url_for('predict')}}" method="POST">
+            <b>Bare_Nuclei</b>: <input type="number" name="bare_nuclei" /><br />
+            <b>Uniformity_of_cell_shape</b>: <input type="number" name="uniformity_cell_shape" /><br />
+            <b>Uniformity_of_cell_size</b>: <input type="number" name="uniformity_cell_size" /><br />
+            <b>Bland_Chromatin</b>: <input type="number" name="bland_chromatin" /><br />
+            <input type="submit" value="Predict" style="background-color:Pink;"/>
+        </form><br />
+        <b>Kernel SVM Model Prediction: {{ predict }}</b>
+        <h4>By Magnus Aghe</h4>
+        <h4>Course: ANA680 - Machine Learning Deployment</h4>
+    </body>
+</html>
